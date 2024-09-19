@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="author" content="" />
+  <title>Business Card</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <style>
+  @page {
+    margin: 0;
+    size: 8.5in 11in;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 8.5in;
+    height: 11in;
+  }
+  .grid {
+    display: grid;
+    width: 8.5in;
+    height: 11in;
+    grid-template-columns: repeat(4, calc(100% / 4));
+    grid-template-rows: repeat(3, calc(100% / 3));
+    justify-items: center;
+    align-items: center;
+  }
+  .wrapper {
+    box-sizing: border-box;
+    width: 2in;
+    height: 3in;
+    color: white;
+    background-color: black;
+  }
+  @media screen {
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    .grid {
+      margin: auto;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <template id="card-template">
+  <img class="logo" src="xSEL Favicon Final.png" alt="Logo" />
+  <div class="me">
+    <div class="name"><slot name="name"><span></span></slot></div>  <!–– student name ––>
+    <div class="title"><slot name="title"><span></span></slot></div> <!–– login ––>
+    <div class="coordinates">
+      <p class="contact-email"><slot name="email"><span></span></slot></p> <!–– teacher ––>
+      <p class="phone"><slot name="phone"><span></span></slot></p> <!–– school ––>
+      <slot name="address"><div class="address"></div></slot>  <!–– District ––>
+      <p class="website"><slot name="url"><span></span></slot></p>   <!–– URL ––>
+    </div>
+  </div>
+  <style>
+  .logo {
+    display: block;
+    max-width: 75%;
+    margin: auto;
+    padding: .3in 0 0;
+  }
+  .me {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    line-height: 1.7em;
+    padding: 0.4cm;
+  }
+  .name {
+    font-weight: bold;
+  }
+  .coordinates {
+    color: #bbb;
+    margin-top: 0.5cm;
+    line-height: 1em;
+  }
+  </style>
+  </template>
+
+  
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Chloe Howard</span>
+        <span slot="title">Username &amp; Password: NA.153027417</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Hannah Heethuis</span>
+        <span slot="title">Username &amp; Password: NA.476569586</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Stella Friess</span>
+        <span slot="title">Username &amp; Password: NA.540470300</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Brooklyn Sebela</span>
+        <span slot="title">Username &amp; Password: NA.935049297</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Camilla Pels</span>
+        <span slot="title">Username &amp; Password: NA.1346415327</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Anderson Hoiles</span>
+        <span slot="title">Username &amp; Password: NA.3182159271</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Evan Barberini</span>
+        <span slot="title">Username &amp; Password: NA.3250610091</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">James Ledtke</span>
+        <span slot="title">Username &amp; Password: NA.3679439376</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Matthew Burtt</span>
+        <span slot="title">Username &amp; Password: NA.3771074790</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Asher Tiesworth</span>
+        <span slot="title">Username &amp; Password: NA.4401928899</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Fiona Kurth</span>
+        <span slot="title">Username &amp; Password: NA.4494097808</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Emilia Rubino</span>
+        <span slot="title">Username &amp; Password: NA.4974631250</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Auvi Francetic</span>
+        <span slot="title">Username &amp; Password: NA.5742727629</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Keller Worden</span>
+        <span slot="title">Username &amp; Password: NA.5758275159</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Petra Qutaishat</span>
+        <span slot="title">Username &amp; Password: NA.5853396385</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Marin Henry</span>
+        <span slot="title">Username &amp; Password: NA.6049002660</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">MaKennon McDonald</span>
+        <span slot="title">Username &amp; Password: NA.6062470149</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Bodhi Winterer</span>
+        <span slot="title">Username &amp; Password: NA.6568290964</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Sable Knaack</span>
+        <span slot="title">Username &amp; Password: NA.6660447603</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Myles Gross</span>
+        <span slot="title">Username &amp; Password: NA.6921896972</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Ella Plamondon</span>
+        <span slot="title">Username &amp; Password: NA.7277094344</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Tobias Olstad-Simmons</span>
+        <span slot="title">Username &amp; Password: NA.7468018244</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Gabriel Streit</span>
+        <span slot="title">Username &amp; Password: NA.7746174403</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Abe Blackburn</span>
+        <span slot="title">Username &amp; Password: NA.8513544828</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Baylor Mazzola</span>
+        <span slot="title">Username &amp; Password: NA.8832687749</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Caleb Buchholz</span>
+        <span slot="title">Username &amp; Password: NA.9094513157</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+    <div class="wrapper" data-repeat="1">
+        <span slot="name">Phoebe Walter</span>
+        <span slot="title">Username &amp; Password: NA.9847840517</span>
+    <span slot="phone">School: Central Grade Elementary</span>
+    <span slot="email">Teacher: McDonougAn</span>
+    <span slot="url">http://selweb.com</span>
+    <div slot="address" class="address">District: Traverse City Area Public Schools</div>
+  </div>
+  
+  <!-- if you prefer black text on white background, set eval=TRUE on the chunk below -->
+  <style type="text/css">
+  .wrapper {
+    color: black;
+    background-color: white;
+    border: 1px dotted black;
+  }
+  .coordinates {
+    color: #333;
+  }
+  .logo {
+    display: block;
+    height: 15%;
+    # margin-right: 0;
+    # margin-top: .2in;
+    # align-items: center;
+    # justify-content: center
+    # #padding: 0 .3in 0;
+    # float: center;
+  }
+  .contact-email {
+    margin-top: 0.5cm;
+  }
+  .website {
+    margin-top: 0.5cm;
+  }
+  </style>
+
+  <script>
+    (() => {
+      // when a card is created using markdown, Pandoc embeds spans in paragraphs
+      // we need to move these spans outside paragraphs to be detected by the template
+      let paragraphs = document.querySelectorAll('.wrapper > p');
+      for (let paragraph of paragraphs) {
+        let wrapper = paragraph.parentElement;
+        for (let element of paragraph.childNodes) {
+          wrapper.appendChild(element);
+        }
+      }
+
+      // repeat cards
+      const maxItemsPerGrid = 4 * 3;
+      let cards = document.querySelectorAll('.wrapper');
+      for (const card of cards) {
+        for (let i = 1; i < card.dataset.repeat; i++) {
+          document.body.insertBefore(card.cloneNode(true), card);
+        }
+      }
+
+      // spread the cards in grids
+      cards = document.querySelectorAll('.wrapper');
+      let cardsArray = Array.from(cards);
+      while (cardsArray.length > 0) {
+        const numberOfItemsToInsertInGrid = Math.min(maxItemsPerGrid, cardsArray.length);
+        let grid = document.createElement('div');
+        grid.className = 'grid';
+        document.body.insertBefore(grid, cardsArray[0]);
+        for (let card of cardsArray.slice(0, numberOfItemsToInsertInGrid)) {
+          grid.appendChild(card);
+        }
+        cardsArray.splice(0, numberOfItemsToInsertInGrid);
+      }
+
+      // build the shadow DOM for each card
+      let templateContent = document.getElementById('card-template').content;
+      let styles = document.querySelectorAll('body > style');
+      for (let card of cards) {
+        let shadowDOM = card.attachShadow({  mode: 'open' });
+        shadowDOM.appendChild(templateContent.cloneNode(true));
+        for (let style of styles) {
+          shadowDOM.innerHTML += '<style>' + style.innerHTML + '</style>';
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

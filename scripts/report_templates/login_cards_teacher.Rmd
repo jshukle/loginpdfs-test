@@ -1,0 +1,70 @@
+---
+params:
+  roster: x
+  prefix: x
+  school: x
+  version: x
+  teacher: x
+logo: "Insight_favicon.png"
+paperwidth: 8.5in
+paperheight: 11in
+cols: 4
+rows: 3
+output:
+  pagedown::business_card:
+   template: customcard.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+roster <- dplyr::filter(params$roster, class ==params$teacher) # 
+```
+
+```{r data-preparation}
+person <- purrr::pmap(roster, function(first_name, last_name, class, student_id, school, district,...) {
+  list(
+    name = paste0(first_name, " ", last_name),
+    title = paste0("Username & Password: ", params$prefix, ".", student_id),
+    email = paste0("Teacher: ", class),
+    phone = paste0("School: ", stringr::word(school, 1, stringr::str_count(school, stringr::boundary("word"))[1])),
+    address = paste0("District: ", district),
+    url = paste0("http://selweb.com")
+  )
+})
+```
+
+---
+```{r write-yaml, results='asis'}
+cat(yaml::as.yaml(list(person = person)))
+```
+---
+
+<!-- if you prefer black text on white background, set eval=TRUE on the chunk below -->
+
+```{css, eval=TRUE}
+.wrapper {
+  color: black;
+  background-color: white;
+  border: 1px dotted black;
+}
+.coordinates {
+  color: #333;
+}
+.logo {
+  display: block;
+  height: 15%;
+  # margin-right: 0;
+  # margin-top: .2in;
+  # align-items: center;
+  # justify-content: center
+  # #padding: 0 .3in 0;
+  # float: center;
+}
+.contact-email {
+  margin-top: 0.5cm;
+}
+.website {
+  margin-top: 0.5cm;
+}
+```
+
